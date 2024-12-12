@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Link Embedder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Link Converter</h1>
+        <p>Enter a YouTube link to convert it to an embed link:</p>
+        <input type="text" id="youtubeLink" placeholder="Enter YouTube link here">
+        <button onclick="convertLink()">Convert</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function convertLink() {
+            let youtubeLink = document.getElementById("youtubeLink").value;
+            let videoId = youtubeLink.split("v=")[1].split("&")[0];
+            let embedLink = "https://youtube.com/embed/" + videoId;
+            document.getElementById("result").innerHTML = `<p>Embed Link: <a href="${embedLink}" target="_blank">${embedLink}</a></p>`;
+        }
+    </script>
+</body>
+</html>
