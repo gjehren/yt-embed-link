@@ -32,6 +32,7 @@
             background-color: #0056a3;
         }
         #result {
+            display: none;
             margin-top: 20px;
             padding: 10px;
             background-color: #f8f8f8;
@@ -56,6 +57,7 @@
             let videoId = youtubeLink.split("v=")[1].split("&")[0];
             let embedLink = "https://youtube.com/embed/" + videoId;
             document.getElementById("result").innerHTML = `<p>Embed Link: <a href="${embedLink}" target="_blank">${embedLink}</a></p>`;
+            document.getElementById("result").style.display = "block";
         }
     </script>
 </body>
