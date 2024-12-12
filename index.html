@@ -7,21 +7,27 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 40px;
+            margin: 0;
+            padding: 0;
             background-color: #001f3f;
             color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         .container {
-            max-width: 600px;
-            margin: auto;
+            width: 80%;
+            max-width: 800px;
             text-align: center;
         }
         input, button {
-            margin: 10px 0;
-            padding: 10px;
+            margin: 20px 0;
+            padding: 20px;
             width: 100%;
             border-radius: 15px;
             border: none;
+            font-size: 1.5em;
         }
         button {
             background-color: #0074D9;
@@ -34,18 +40,19 @@
         #result {
             display: none;
             margin-top: 20px;
-            padding: 10px;
+            padding: 20px;
             background-color: #f8f8f8;
             color: #000;
             border: 1px solid #ddd;
             border-radius: 10px;
+            font-size: 1.5em;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>YouTube Link Converter</h1>
-        <p>Enter a YouTube link to convert it to an embed link:</p>
+        <h1 style="font-size: 2.5em;">YouTube Link Converter</h1>
+        <p style="font-size: 1.5em;">Enter a YouTube link to convert it to an embed link:</p>
         <input type="text" id="youtubeLink" placeholder="Enter YouTube link here">
         <button onclick="convertLink()">Convert</button>
         <div id="result"></div>
